@@ -505,9 +505,6 @@ background: #BED3A2;
     font-weight: 300;
     color:blue;
   }   
-#header-title{
-  display:none;
-  }
   button{
     font-family: 'Oxygen';
   }
@@ -517,6 +514,7 @@ background: #BED3A2;
   #top-view { 
   background-color: #FFAABB;
   height:auto;
+  width: auto;
   padding-top:10px; 
   margin-top:0;
   }  
@@ -528,16 +526,18 @@ background: #BED3A2;
   } 
   .top-view-col article{ 
     border:solid 4px navy;
-    padding:10px; 
+    
     margin-right:10%;
     font-size: 20px;
   }
 .media img{
   height:auto;
 }
-.carousel{ 
-    height:40vh;
-    border:solid 2px purple; 
+#carousel{ 
+    margin: auto;
+    padding:5px;
+    height:50vh;
+    border:solid 2px white; 
    }
   .carousel-item {
   height: 600px;
@@ -560,11 +560,18 @@ background: #BED3A2;
      font-size:15px;
      width:100%; 
      padding:7.5%; 
+  } 
+  .form-container{
+    display:flex; 
+    align-self: center;
   }
   form{  
+    width:auto;
     margin-top:0;
+    margin-left:10px;
     background-color:lightblue;
     display: flex; 
+    justify-content: center;
     flex-direction: column; 
     align-content: center;
     } 
@@ -575,7 +582,8 @@ background: #BED3A2;
     width:auto;
     margin-top:0;   
   } 
-  #main-submit{   
+  #main-submit{ 
+    margin-left:16.7rem;  
     font-size:16px; 
     text-align: center;
     align-self:center;
@@ -659,7 +667,8 @@ background: #BED3A2;
     overflow: auto;
   } 
  
-  footer{background-color:#67C0FC; }
+  footer{ background-color:#789CCE; 
+    font-family:'Oxygen', sans-serif; }
   
   footer .container-fluid{width:100vw;}
   

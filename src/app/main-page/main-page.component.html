@@ -88,7 +88,7 @@
               </ng-template>
               <ng-template ngbSlide>
                   <div class="media"> 
-                    <img class="img-fluid rounded mx-auto d-block" style="max-width: 400px" src="./assets/img/backsplashpage1.jpeg">
+                    <img class="img-fluid rounded mx-auto d-block" style="max-width: 400px; max-height: 265px;" src="./assets/img/backsplashpage1.jpeg">
                   </div> 
                   <div class="centered"> 
                     <h3 style="color: black">Get Connected</h3>
@@ -102,7 +102,7 @@
                       <p style="color: black;">Macaroons, Cupcakes, Donuts Oh my!</p>
                     </div>
                   <div class="media"> 
-                    <img class="img-fluid rounded mx-auto d-block" style="max-width: 400px" src="./assets/img/products.jpg">
+                    <img class="img-fluid rounded mx-auto d-block" style="max-width: 400px; max-height: 285px;" src="./assets/img/products.jpg">
                   </div> 
                    
               </ng-template>
@@ -139,7 +139,8 @@
                   {{email.untouched}}
                   {{email.pristine}}
                   {{email.valid}}
-                    <form #emailForm="ngForm" class="border border-light p-5">  
+                  <div class="form-container">
+                    <form #emailForm="ngForm" class="border p-5">  
                         <h4 class="text-uppercase text-center font-weight-bold" style="font-family: Oxygen;"> Join our mailing list</h4 > 
                         <p class="mb-4 text-center"> Enter your email for newsletters and coupons</p>
                         <div class="form-group">
@@ -160,6 +161,7 @@
                         </div> 
                        <button type="button" id="button" mdbBtn style="background-color: #789CCE;" class="btn-submit-margin text-uppercase mt-5" > Submit</button>   
                  </form>
+                </div>
               </section>
          
     </section> 
