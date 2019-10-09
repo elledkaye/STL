@@ -5,7 +5,7 @@ import {MainPageComponent} from './main-page/main-page.component';
 import {BlogComponent} from './blog/blog.component'; 
 import {OrderComponent} from './order/order.component';
 import {ContactComponent} from './contact/contact.component';
-
+import {HomeComponent} from './home/home.component';
 
 
 
@@ -14,7 +14,8 @@ const routes: Routes = [
   {path:'main-page', component: MainPageComponent},
   {path:'blog', component: BlogComponent},
   {path:'order', component: OrderComponent},
-  {path:'contact', component: ContactComponent}
+  {path:'contact', component: ContactComponent},
+  {path: 'home', component: HomeComponent}
 ]; 
 
 

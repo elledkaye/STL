@@ -1,7 +1,8 @@
 
 <!-- Main navigation -->
-<header>      
-  <div> 
+<header>   
+  <!--NavBar container-->     
+  <div class="container-fluid"> 
   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo lighten-2 ie-nav"  [containerInside]="false">
     <mdb-navbar-brand>
       <a class="logo navbar-brand font-weight-bold" href="main-page"> Sweeter Things N' life
@@ -72,9 +73,10 @@
     </links>
 </mdb-navbar> 
 <!--./Navbar-->  
-    </div> 
+    </div>  
+    <!--./NavBar container-->
     <section id="top-view">  
-      <div id="carousel" class="carousel slide" data-ride="carousel">
+      <div id="carousel" class="carousel slide container" data-ride="carousel">
         <ngb-carousel>
              <ng-template ngbSlide>
                   <div class="media">

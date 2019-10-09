@@ -1,95 +1,97 @@
-
-<div> 
-        <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo lighten-2 ie-nav"  [containerInside]="false">
-                <mdb-navbar-brand>
-                  <a class="logo navbar-brand font-weight-bold" href="main-page"> Sweeter Things N' life
-                  </a> 
-                </mdb-navbar-brand>
-                  <links>
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active" >
-                          <a class="nav-link" href="#">Home 
-                            <span class="sr-only">(current)</span> 
-                          </a>
-                        </li>
-                        <hr class="w-100 clearfix d-md-none">
-                          <!-- Dropdown -->
-                         <li class="nav-item dropdown" dropdown>
-                          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-                            In Store Hours 
-                            <span class="caret"></span></a>
-                          <div *dropdownMenu class="dropdown-menu dropdown dropdown-default" role="menu">
-                              <a class="dropdown-item waves-light" mdbWavesEffect href="#">Monday - Thursday: 9:00AM - 9:30PM</a>
-                              <a class="dropdown-item waves-light" mdbWavesEffect href="#">Friday - Saturday: 8:30AM - 10:30PM</a>
-                              <a class="dropdown-item waves-light" mdbWavesEffect href="#">Sunday: 8:30AM - 7:00PM</a> 
-                              <a class="dropdown-item waves-light" mdbWavesEffect href="#">Delivery Times</a> 
-                           </div>
-                         </li>
-                        <hr class="w-100 clearfix d-md-none"> 
-                        <li class="nav-item waves-light" mdbWavesEffect> 
-                          <a class="nav-link" mdbPageScroll href="#about"> About </a>
-                        </li>
-                          <hr class="w-100 clearfix d-md-none">    
-                        <li class="nav-item waves-light" mdbWavesEffect>
-                          <a class="nav-link" routerLink="/order">Order</a>
-                        </li>
-                          <hr class="w-100 clearfix d-md-none"> 
-                         <li class="nav-item waves-light" mdbWavesEffect>
-                            <a class="nav-link">Custom Design</a>
-                          </li> 
-                          <hr class="w-100 clearfix d-md-none"> 
-                        <li class="nav-item waves-light" mdbWavesEffect> 
-                          <a class="nav-link" routerLink="/blog">Blog</a>  
-                        </li> 
-                    </ul>
-                    <button type="button" mdbBtn class="relative waves-light" (click)="basicModal.show()">Cart</button> 
-                    <div mdbModal #basicModal="mdbModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true"> 
-                      <div class="modal-dialog modal-side modal-top-right" role="document"> 
-                        <div class="modal-content"> 
-                          <div class="modal-healder">  
-                              <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()"> 
-                                <span aria-hidden="true">×</span>
-                              </button> 
-                              <h4 class="modal-title"> Your Cart</h4>
-                            </div>
-                                <!--./modal-header-->
-                                <div class="modal-body"> 
-                                   ...
-                                </div> 
-                                <!--./modal-body--> 
-                                <div class="modal-footer"> 
-                                       <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Not Ready Yet</button>
-                                       <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Check Out</button>
-                                </div> 
-                                <!--./modal-footer-->
-               
-                           </div>
-                           <!--./modal-content-->
-                       </div>
-                      </div>
-                  </links>
-              </mdb-navbar> 
-              
-              <!--Navbar-->  
-              
-      
-            </div> 
-<!--Content-->  
-<div class="container-fluid justify-content-center"> 
-  <div class="row"> 
-<div class="header col-md-4 text-center">
-  <h4 class="text-uppercase font-weight-bold">Order Cupcakes & More</h4>
-</div> 
-<div class="row justify-content-center">
-    <div class=" col-4 "> 
-       <button type="button" mdbBtn rounded = true style="background-color:#FFAABB;"> <mdb-icon fas icon="mobile-alt" size="2x" class="mx-2"></mdb-icon>Pickup</button>
-  
-    </div> 
-    <div class="col-4"> 
-       <button type="button"  mdbBtn rounded = "true" style="background-color:#FFAABB;" > <mdb-icon fas icon="taxi" size="2x" class="mx-2"></mdb-icon>Delivery</button>
-    </div> 
+<!-- Main navigation -->
+<header>   
+    <!--NavBar container-->     
+    <div class="container-fluid"> 
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo lighten-2 ie-nav"  [containerInside]="false">
+      <mdb-navbar-brand>
+        <a class="logo navbar-brand font-weight-bold" href="main-page"> Sweeter Things N' life
+        </a> 
+      </mdb-navbar-brand>
+       <links>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+              <a class="nav-link" href="#">Home 
+                <span class="sr-only">(current)</span> 
+              </a>
+            </li>
+            <hr class="w-100 clearfix d-md-none">
+              <!-- Dropdown -->
+             <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                In Store Hours 
+                <span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-default" role="menu">
+                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">Monday - Thursday: 9:00AM - 9:30PM</a>
+                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">Friday - Saturday: 8:30AM - 10:30PM</a>
+                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">Sunday: 8:30AM - 7:00PM</a> 
+                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">Delivery Times</a> 
+               </div>
+             </li>
+            <hr class="w-100 clearfix d-md-none"> 
+            <li class="nav-item waves-light" mdbWavesEffect> 
+              <a class="nav-link" mdbPageScroll href="#about"> About </a>
+            </li>
+              <hr class="w-100 clearfix d-md-none">    
+            <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" routerLink="/order">Order</a>
+            </li>
+              <hr class="w-100 clearfix d-md-none"> 
+             <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link">Custom Design</a>
+              </li> 
+              <hr class="w-100 clearfix d-md-none"> 
+            <li class="nav-item waves-light" mdbWavesEffect> 
+              <a class="nav-link" routerLink="/blog">Blog</a>  
+            </li> 
+        </ul>
+        <button type="button" mdbBtn class="relative waves-light" (click)="basicModal.show()">Cart</button> 
+        <div mdbModal #basicModal="mdbModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true"> 
+          <div class="modal-dialog modal-side modal-top-right" role="document"> 
+            <div class="modal-content"> 
+              <div class="modal-healder">  
+                  <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()"> 
+                    <span aria-hidden="true">×</span>
+                  </button> 
+                  <h4 class="modal-title"> Your Cart</h4>
+                </div>
+                    <!--./modal-header-->
+                    <div class="modal-body"> 
+                       ...
+                    </div> 
+                    <!--./modal-body--> 
+                    <div class="modal-footer"> 
+                           <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Not Ready Yet</button>
+                           <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Check Out</button>
+                    </div> 
+                    <!--./modal-footer-->
    
-  </div>
+               </div>
+               <!--./modal-content-->
+           </div>
+          </div>
+      </links>
+  </mdb-navbar> 
+  <!--./Navbar-->  
+      </div>  
+      <!--./NavBar container-->  
+
+
+<!--Content-->  
+<div class="main-content container-fluid justify-content-center"> 
+  <div class="main-content-row">  
+    <div class="content-container container-fluid"> 
+      <div id="content-row">
+<div class="content-header-col">
+  <h5 class="text-uppercase font-weight-bold">Order Cupcakes & More</h5>
+</div> 
+<div class=" col-4 "> 
+    <button type="button" mdbBtn rounded = true style="background-color:#FFAABB;"> <mdb-icon fas icon="mobile-alt" size="2x" class="mx-2"></mdb-icon>Pickup</button>
+ </div> 
+ <div class="col-4"> 
+    <button type="button"  mdbBtn rounded = "true" style="background-color:#FFAABB;" > <mdb-icon fas icon="taxi" size="2x" class="mx-2"></mdb-icon>Delivery</button>
+ </div>
+</div> 
+</div>
     <div class="col-md container-fluid text-center"> 
       <hr/>
    <h4>Pick up times</h4>  

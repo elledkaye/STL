@@ -11,6 +11,7 @@ import {MainPageComponent} from './main-page/main-page.component';
 import { ContactComponent } from './contact/contact.component'
 import { BlogComponent } from './blog/blog.component';
 import { OrderComponent } from './order/order.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OrderComponent } from './order/order.component';
     MainPageComponent,
     ContactComponent,
     BlogComponent,
-    OrderComponent
+    OrderComponent,
+    HomeComponent
   
   ],
   imports: [

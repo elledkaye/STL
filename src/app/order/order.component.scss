@@ -2,6 +2,43 @@
   margin:0px; 
   box-sizing: border-box; 
   } 
+
+
+  @media only screen and (min-device-width:1224px) and (max-device-width:1600px){  
+    .logo{
+      font-family: 'Oxygen';
+     }  
+
+     .main-content{
+       border:solid 2px black; 
+       background-color:lightcoral; 
+     } 
+
+     .content-container{ 
+       border:solid 3px lightgray;
+
+
+     } 
+
+     #content-row{
+       border:solid 3px navy; 
+       display: flex; 
+       flex-direction: column; 
+       align-content: center; 
+       padding:5%;
+
+     } 
+
+     .content-header-col{ 
+       align-self: center;
+     }
+.col-4{ 
+  align-self: center; 
+  padding-left:1.5%;
+  border:solid 2px black;
+}
+  }
+
 /*portrait*/
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) {  
 hr{margin:5px; 
