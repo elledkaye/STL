@@ -2,7 +2,7 @@
 <header>   
         <!--NavBar container-->     
         <div class="container-fluid"> 
-        <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light lighten-2 ie-nav"  [containerInside]="false">
+        <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light lighten-2 ie-nav" style="height:10%;"  [containerInside]="false">
           <mdb-navbar-brand>
             <a class="logo navbar-brand font-weight-bold" href="main-page"> Sweeter Things N' life
             </a> 
@@ -75,9 +75,36 @@
           </div>  
           <!--./NavBar container--> 
 <div id="top-view" class="container-fluid">
+    <h3 class="text-center" style="color:white;">#BiteME</h3>
 <div id="carousel" class="carousel slide container-fluid" data-ride="carousel"> 
-
-        <ngb-carousel>
+        <mdb-carousel>
+                <mdb-carousel-item>
+                  <img class="w-100" style="max-height:540px" src="./assets/img/pastry1.jpeg" alt="First slide">
+                </mdb-carousel-item>
+                <div class="centered">
+                        <h3 class="font-weight-bold">Welcome</h3>
+                        <p >Visit one of our locations</p> 
+                        <mdb-icon fas icon="map-marker-alt" size="2x"></mdb-icon>
+                    </div>
+                <mdb-carousel-item>
+                  <img class="d-block w-100" style="max-height:535px" src="/assets/img/backsplashpage1.jpeg" alt="Second slide">
+                  <div class="centered"> 
+                        <h3 class="font-weight-bold">Get Connected</h3>
+                        <p class="white-text">Download our app! </p>
+                        <div>
+                                <img src="./assets/img/storelogo2 (3).png" style="width:160px;"> 
+                             </div>
+                             <div> 
+                                 <img src="./assets/img/storelogo.png" style="width: 160px;">
+                             </div>
+                  </div>
+                </mdb-carousel-item>
+               
+                <mdb-carousel-item>
+                  <img class="d-block w-100" src="./assets/img/products.jpg" alt="Third slide">
+                </mdb-carousel-item>
+              </mdb-carousel>
+   <!---   <ngb-carousel>
                 <ng-template ngbSlide>
                      <div class="media">
                          <img class="img-fluid img-responsive rounded mx-auto" src="./assets/img/pastry1.jpeg"  alt="Random first slide">
@@ -90,12 +117,12 @@
                  </ng-template>
                  <ng-template ngbSlide>
                      <div class="media"> 
-                       <img class="img-fluid rounded mx-auto d-block" style="max-width: 500px; max-height: 265px;" src="./assets/img/backsplashpage1.jpeg">
+                       <img class="img-fluid rounded mx-auto d-block" style="max-width: 750px; max-height: 365px;" src="./assets/img/backsplashpage1.jpeg">
                      </div> 
                      <div class="centered"> 
                        <h3 class="font-weight-bold" style="background-color: blue;">Get Connected</h3>
                        <p class="mdb-color white-text">Download our app! </p>
-                       <!--<button mdbBtn color="primary">app store <mdb-icon fab icon="app-store-ios"></mdb-icon></button>-->
+                       <button mdbBtn color="primary">app store <mdb-icon fab icon="app-store-ios"></mdb-icon></button>
                         <div>
                        <img src="./assets/img/storelogo2 (3).png" style="width:90px;"> 
                     </div>
@@ -114,7 +141,7 @@
                      </div> 
                       
                  </ng-template>
-             </ngb-carousel>
+             </ngb-carousel> -->
 </div>
 <!--./.carousel--> 
 
@@ -158,11 +185,12 @@ header <button type="button" class="close pull-right" aria-label="Close" (click)
 <div class="top-level-container container-fluid"> 
     <div id="top-level-row"> 
         <div class="top-level-col d-flex flex-col"> 
-            <h5 class="font-weight-bold text-uppercase" style="font-family: Playfair Display;">Baking the world a better place since 1990</h5> 
+           <!--- <h5 class="font-weight-bold text-uppercase" style="font-family: Playfair Display;">Baking the world a better place since 1990</h5> -->
     </div>  
     <div class="top-level-col d-flex flex-col"> 
-    <p class="text-center lead">We offer various kinds of pastries we also offer gluten free, vegan and vegetarian friendly pastries.</p> 
-    </div>
+   <!-- <p class="text-center lead">We offer various kinds of pastries we also offer gluten free, vegan and vegetarian friendly pastries.</p> -->
+    </div> 
+
 </div> 
      {{emailForm.value | json}}  
     <hr/>
@@ -175,7 +203,7 @@ header <button type="button" class="close pull-right" aria-label="Close" (click)
     <div id="subscribe-row"> 
         <div class="subscribe-col d-flex flex-col">  
             <form #emailForm="ngForm" class="p-5"> 
-             <h4 class="text-uppercase text-center font-weight-bold" style="font-family: Oxygen;"> Join our mailing list</h4 > 
+             <h4 class="text-uppercase text-center font-weight-bold" > Join our mailing list</h4 > 
              <p class="mb-4 text-center"> Enter your email for newsletters and coupons</p> 
              <div class="form-group"> 
                  <input mdbInput mdbValidate type="email" placeholder="Enter Email" id="users-email" class="form-control" required name="email" pattern="[^ @]*@[^ @]*" #email="ngModel" [(ngModel)]="subscribeModel.email"> 
