@@ -4,8 +4,9 @@
         <div class="container-fluid"> 
         <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light lighten-2 ie-nav" style="height:10%;"  [containerInside]="false">
           <mdb-navbar-brand>
-            <a class="logo navbar-brand font-weight-bold" href="main-page"> Sweeter Things N' life
-            </a> 
+                <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect><mdb-icon fab icon="facebook-f"></mdb-icon></a>
+                <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect><mdb-icon fab icon="twitter"></mdb-icon></a>
+                <a type="button" mdbBtn floating="true" size="sm" color="ins" class=" waves-light" mdbWavesEffect><mdb-icon fab icon="instagram"></mdb-icon></a>
           </mdb-navbar-brand>
            <links>
               <ul class="navbar-nav mr-auto">
@@ -44,23 +45,33 @@
                   <a class="nav-link" routerLink="/blog">Blog</a>  
                 </li> 
             </ul>
-            <button type="button" mdbBtn class="relative waves-light" (click)="basicModal.show()">Cart</button> 
-            <div mdbModal #basicModal="mdbModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true"> 
+            <button type="button" mdbBtn class="relative waves-light" data-toggle="modal" data-target="#cartModal" (click)="cartModal.show()">Cart</button> 
+            <div mdbModal  #cartModal="mdbModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true"> 
               <div class="modal-dialog modal-side modal-top-right" role="document"> 
                 <div class="modal-content"> 
-                  <div class="modal-healder">  
-                      <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()"> 
-                        <span aria-hidden="true">×</span>
-                      </button> 
+                  <div class="modal-header"> 
                       <h4 class="modal-title"> Your Cart</h4>
+                      <button type="button" class="close pull-right" aria-label="Close" (click)="cartModal.hide()"> 
+                        <span aria-hidden="true">×</span>
+                        </button> 
                     </div>
                         <!--./modal-header-->
                         <div class="modal-body"> 
-                           ...
+                           <table class="table table-hover"> 
+                               <thead> 
+                                   <th>#</th> 
+                                   <th>Product</th> 
+                                   <th>Price</th> 
+                                   <th>Remove</th>
+                               </thead> 
+                            <tbody>  
+                                table body
+                            </tbody>
+                           </table>
                         </div> 
                         <!--./modal-body--> 
                         <div class="modal-footer"> 
-                               <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Not Ready Yet</button>
+                               <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="cartModal.hide()" mdbWavesEffect>Not Ready Yet</button>
                                <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Check Out</button>
                         </div> 
                         <!--./modal-footer-->
@@ -76,10 +87,11 @@
           <!--./NavBar container--> 
 <div id="top-view" class="container-fluid">
     <h3 class="text-center" style="color:white;">#BiteME</h3>
+ 
 <div id="carousel" class="carousel slide container-fluid" data-ride="carousel"> 
         <mdb-carousel>
                 <mdb-carousel-item>
-                  <img class="w-100" style="max-height:540px" src="./assets/img/pastry1.jpeg" alt="First slide">
+                  <img class="rounded w-100" style="max-height:540px" src="./assets/img/pastry1.jpeg" alt="First slide">
                 </mdb-carousel-item>
                 <div class="centered">
                         <h3 class="font-weight-bold">Welcome</h3>
@@ -87,15 +99,15 @@
                         <mdb-icon fas icon="map-marker-alt" size="2x"></mdb-icon>
                     </div>
                 <mdb-carousel-item>
-                  <img class="d-block w-100" style="max-height:535px" src="/assets/img/backsplashpage1.jpeg" alt="Second slide">
+                  <img class=" rounded d-block w-100" style="max-height:535px" src="/assets/img/backsplashpage1.jpeg" alt="Second slide">
                   <div class="centered"> 
                         <h3 class="font-weight-bold">Get Connected</h3>
                         <p class="white-text">Download our app! </p>
                         <div>
-                                <img src="./assets/img/storelogo2 (3).png" style="width:160px;"> 
+                                <img class="rounded" src="./assets/img/storelogo2 (3).png" style="width:160px;"> 
                              </div>
                              <div> 
-                                 <img src="./assets/img/storelogo.png" style="width: 160px;">
+                                 <img class="rounded"src="./assets/img/storelogo.png" style="width: 160px;">
                              </div>
                   </div>
                 </mdb-carousel-item>
@@ -104,76 +116,36 @@
                   <img class="d-block w-100" src="./assets/img/products.jpg" alt="Third slide">
                 </mdb-carousel-item>
               </mdb-carousel>
-   <!---   <ngb-carousel>
-                <ng-template ngbSlide>
-                     <div class="media">
-                         <img class="img-fluid img-responsive rounded mx-auto" src="./assets/img/pastry1.jpeg"  alt="Random first slide">
-                     </div>
-                     <div class="centered">
-                         <h3 class="font-weight-bold" style="color: white">Welcome</h3>
-                         <p style="color: white;">Visit one of our locations</p> 
-                         <mdb-icon fas icon="map-marker-alt" size="2x" class="white-text"></mdb-icon>
-                     </div>
-                 </ng-template>
-                 <ng-template ngbSlide>
-                     <div class="media"> 
-                       <img class="img-fluid rounded mx-auto d-block" style="max-width: 750px; max-height: 365px;" src="./assets/img/backsplashpage1.jpeg">
-                     </div> 
-                     <div class="centered"> 
-                       <h3 class="font-weight-bold" style="background-color: blue;">Get Connected</h3>
-                       <p class="mdb-color white-text">Download our app! </p>
-                       <button mdbBtn color="primary">app store <mdb-icon fab icon="app-store-ios"></mdb-icon></button>
-                        <div>
-                       <img src="./assets/img/storelogo2 (3).png" style="width:90px;"> 
-                    </div>
-                    <div> 
-                        <img src="./assets/img/storelogo.png" style="width: 90px;">
-                    </div>
-                    </div>
-                 </ng-template>
-                 <ng-template ngbSlide>
-                     <div class="centered"> 
-                         <h3 class="font-weight-bold" style="color:white;" >Products</h3> 
-                         <p style="color: black;">Macaroons, Cupcakes, Donuts Oh my!</p>
-                       </div>
-                     <div class="media"> 
-                       <img class="img-fluid rounded mx-auto d-block" style="max-width:400px; max-height: 285px;" src="./assets/img/products.jpg">
-                     </div> 
-                      
-                 </ng-template>
-             </ngb-carousel> -->
 </div>
 <!--./.carousel--> 
-
 <div id="button-container" class="button containter-fluid"> 
      <div id="button-row"> 
         <button type="button" id="button" mdbBtn style="background-color: black; color: white" class="btn-margin text-uppercase" (click)="orderModal.show()">Order Online</button>  
-        <div mdbModal #orderModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true"> 
+        <div mdbModal #orderModal="mdbModal" class="modal fade" tabindex="-1" role="radiogroup" aria-labelledby="orderModalLabel" aria-hidden="true"> 
             <div class="modal-dialog modal-lg modal-dialog-center  "> 
                 <div class="modal-content"> 
                     <div class="modal-header"> 
-header <button type="button" class="close pull-right" aria-label="Close" (click)="orderModal.hide()"> 
-        <span aria-hidden="true">×</span>
-      </button> 
+                            <h4>Your Order</h4>
+                    <button type="button" class="close pull-right" aria-label="Close" (click)="orderModal.hide()">
+                         <span aria-hidden="true">×</span> 
+                        </button>         
                     </div> 
                     <div class="modal-body"> 
-                        <div> 
-                            <form class="border p-5"> 
-                            <div class="order-form-head">
-                                <button type="button"  class="relative" color="primary" mdbBtn> Pick UP</button> 
-                                <button type="button" mdbBtn> Delivery</button>
-                            </div> 
-                            <div> 
-                                
-                            </div>
-                            </form>
-                        </div>
-
+                      <div class="order-modal-form-container">  
+                        <form [formGroup]="orderForm">
+                        <div>
+                       <input type="radio" mdbInput class="form-check-input" id="pickupChecked" name="orderPickup" formControlName="orderPickup" [value]="false"> 
+                       <label class="form-check-label" for="pickupChecked">Pickup</label>
+                       </div>
+                       <input type="radio" mdbInput class="form-check-input" id="deliveryChecked" name="orderDelivery"  formControlName="orderDelivery" [value]= "false"> 
+                       <label class="form-check-label" for="deliveryChecked">Delivery</label>
+                       <div class="ofm-content"> 
+                       </div> 
+                    </form> 
+                </div>
                     </div> 
                     <div class="modal-footer"> 
-                            <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="orderModal.hide()" mdbWavesEffect>Not Ready Yet</button>
-                            <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Check Out</button>
-
+                    <button type="button" mdbBtn color="black" class="relative waves-light" (click)="OrderOption()" mdbWavesEffect>Continue</button>
                     </div>
                 </div>
             </div> 
@@ -185,10 +157,8 @@ header <button type="button" class="close pull-right" aria-label="Close" (click)
 <div class="top-level-container container-fluid"> 
     <div id="top-level-row"> 
         <div class="top-level-col d-flex flex-col"> 
-           <!--- <h5 class="font-weight-bold text-uppercase" style="font-family: Playfair Display;">Baking the world a better place since 1990</h5> -->
     </div>  
     <div class="top-level-col d-flex flex-col"> 
-   <!-- <p class="text-center lead">We offer various kinds of pastries we also offer gluten free, vegan and vegetarian friendly pastries.</p> -->
     </div> 
 
 </div> 
@@ -203,8 +173,8 @@ header <button type="button" class="close pull-right" aria-label="Close" (click)
     <div id="subscribe-row"> 
         <div class="subscribe-col d-flex flex-col">  
             <form #emailForm="ngForm" class="p-5"> 
-             <h4 class="text-uppercase text-center font-weight-bold" > Join our mailing list</h4 > 
-             <p class="mb-4 text-center"> Enter your email for newsletters and coupons</p> 
+             <h4 class="text-uppercase text-center font-weight-bold" style="font-family: 'Domine'"> Join our mailing list</h4 > 
+             <p class="mb-4 text-center" style="font-family: 'Roboto Condensed'"> Enter your email for newsletters and coupons</p> 
              <div class="form-group"> 
                  <input mdbInput mdbValidate type="email" placeholder="Enter Email" id="users-email" class="form-control" required name="email" pattern="[^ @]*@[^ @]*" #email="ngModel" [(ngModel)]="subscribeModel.email"> 
              </div>
