@@ -1,304 +1,161 @@
-
-<!-- Main navigation -->
-<header>   
-  <!--NavBar container-->     
-  <div class="container-fluid"> 
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo lighten-2 ie-nav"  [containerInside]="false">
-    <mdb-navbar-brand>
-      <a class="logo navbar-brand font-weight-bold" href="main-page"> Sweeter Things N' life
-      </a> 
-    </mdb-navbar-brand>
-     <links>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" >
-            <a class="nav-link" href="#">Home 
-              <span class="sr-only">(current)</span> 
-            </a>
+<header>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo ie-nav" [containerInside]="false">
+  <mdb-navbar-brand>
+      <a class="logo navbar-brand" href="#"><strong>Navbar</strong></a>
+  </mdb-navbar-brand>
+  <links>
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active waves-light" mdbWavesEffect>
+              <a class="nav-link">Home <span class="sr-only">(current)</span></a>
           </li>
-          <hr class="w-100 clearfix d-md-none">
-            <!-- Dropdown -->
-           <li class="nav-item dropdown" dropdown>
-            <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-              In Store Hours 
-              <span class="caret"></span></a>
-            <div *dropdownMenu class="dropdown-menu dropdown dropdown-default" role="menu">
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Monday - Thursday: 9:00AM - 9:30PM</a>
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Friday - Saturday: 8:30AM - 10:30PM</a>
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Sunday: 8:30AM - 7:00PM</a> 
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Delivery Times</a> 
-             </div>
-           </li>
-          <hr class="w-100 clearfix d-md-none"> 
-          <li class="nav-item waves-light" mdbWavesEffect> 
-            <a class="nav-link" mdbPageScroll href="#about"> About </a>
-          </li>
-            <hr class="w-100 clearfix d-md-none">    
           <li class="nav-item waves-light" mdbWavesEffect>
-            <a class="nav-link" routerLink="/order">Order</a>
+              <a class="nav-link">Features</a>
           </li>
-            <hr class="w-100 clearfix d-md-none"> 
-           <li class="nav-item waves-light" mdbWavesEffect>
-              <a class="nav-link">Custom Design</a>
-            </li> 
-            <hr class="w-100 clearfix d-md-none"> 
-          <li class="nav-item waves-light" mdbWavesEffect> 
-            <a class="nav-link" routerLink="/blog">Blog</a>  
-          </li> 
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link">Opinions</a>
+          </li>
       </ul>
-      <button type="button" mdbBtn class="relative waves-light" (click)="basicModal.show()">Cart</button> 
-      <div mdbModal #basicModal="mdbModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true"> 
-        <div class="modal-dialog modal-side modal-top-right" role="document"> 
-          <div class="modal-content"> 
-            <div class="modal-healder">  
-                <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()"> 
-                  <span aria-hidden="true">×</span>
-                </button> 
-                <h4 class="modal-title"> Your Cart</h4>
-              </div>
-                  <!--./modal-header-->
-                  <div class="modal-body"> 
-                     ...
-                  </div> 
-                  <!--./modal-body--> 
-                  <div class="modal-footer"> 
-                         <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Not Ready Yet</button>
-                         <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Check Out</button>
-                  </div> 
-                  <!--./modal-footer-->
+      <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><mdb-icon fab icon="facebook-f"></mdb-icon></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><mdb-icon fab icon="twitter"></mdb-icon></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><mdb-icon fab icon="instagram"></mdb-icon></a>
+          </li>
+      </ul>
+  </links>
+</mdb-navbar>
+<!-- Main -->
+<div class="view" style="border: black;">
  
-             </div>
-             <!--./modal-content-->
-         </div>
+  <div class="full-bg-img">
+    <div class="mask rgba-indigo-slight flex-center">
+      <div class="container" style="border: black;">
+        <div class="white-text text-center wow fadeInUp">
+          <h2>Sweeter Things In Life</h2>
+          <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
         </div>
-    </links>
-</mdb-navbar> 
-<!--./Navbar-->  
-    </div>  
-    <!--./NavBar container-->
-    <section id="top-view">  
-      <div id="carousel" class="carousel slide container" data-ride="carousel">
-        <ngb-carousel>
-             <ng-template ngbSlide>
-                  <div class="media">
-                      <img class="img-fluid rounded mx-auto d-block" src="./assets/img/pastry1.jpeg"  alt="Random first slide">
-                  </div>
-                  <div class="centered">
-                      <h3 class="font-weight-bold" style="color: white">Welcome</h3>
-                      <p style="color: white;">Visit one of our locations</p> 
-                      <mdb-icon fas icon="map-marker-alt" size="2x" class="white-text"></mdb-icon>
-                  </div>
-              </ng-template>
-              <ng-template ngbSlide>
-                  <div class="media"> 
-                    <img class="img-fluid rounded mx-auto d-block" style="max-width: 400px; max-height: 265px;" src="./assets/img/backsplashpage1.jpeg">
-                  </div> 
-                  <div class="centered"> 
-                    <h3 style="color: black">Get Connected</h3>
-                    <p style="color: black;">Download our app! </p> 
-                    <button mdbBtn color="primary">app store <mdb-icon fab icon="app-store-ios"></mdb-icon></button>
-                  </div>
-              </ng-template>
-              <ng-template ngbSlide>
-                  <div class="centered"> 
-                      <h3 style="color:black;" >Products</h3> 
-                      <p style="color: black;">Macaroons, Cupcakes, Donuts Oh my!</p>
-                    </div>
-                  <div class="media"> 
-                    <img class="img-fluid rounded mx-auto d-block" style="max-width: 400px; max-height: 285px;" src="./assets/img/products.jpg">
-                  </div> 
-                   
-              </ng-template>
-          </ngb-carousel>
+        <div class="row d-flex" style="border: 2px; border-color:black ;"> 
+          <div class="col-6 col-sm-6 col-md-4 text-center">.col-6 .col-sm-6 .col-md-4</div>
+          <div class="col-6 col-sm-6 col-md-4 text-center">.col-6 .col-sm-6 .col-md-4</div>
+          <div class="col-6 col-sm-6 col-md-4 text-center">.col-6 .col-sm-6 .col-md-4</div>
         </div>
-          <div id="button-row" class="button-row">   
-              <div id="button-div">
-                  <button type="button" id="button" mdbBtn style="background-color: #789CCE; color: white" class="btn-margin text-uppercase" ><a href="/order">Order Online</a>
-                  </button> 
-                   
-                    </div>  
-              </div> 
-              <h2 class="font-weight-bold text-center" style="font-family: Oxygen;"> Let's bake the world a better place</h2> 
-              <div class="top-view-col col-md d-flex flex-col"> 
-             
-                  <article style="font-family: Noto Serif;"> We offer various kinds of pastrys, 
-                      we also offer gluten free, vegan and vegetarian friendly pastries 
-                     </article>
-              </div>   
-              <section id="email"> 
-                <!--template driven form-->
-                  <div class="decor"><mdb-icon fas icon="circle" size="2x" class="cyan-text"></mdb-icon>
-                    <mdb-icon fas icon="circle" class="cyan-text"></mdb-icon>
-                    <mdb-icon fas icon="circle" size="2x" class="cyan-text "></mdb-icon>
-                    <mdb-icon fas icon="circle" class="cyan-text"></mdb-icon>
-                    <mdb-icon fas icon="circle" size="2x" class="cyan-text">
-                    </mdb-icon> 
-                  </div> 
+      </div> 
+      <!--end of container-->
+    </div>
+  </div>
+  <div> 
+  </div> 
+</div>
+<!-- /.Main -->
+</header> 
+<!--/.Main Navigation-->
+<!--Main Layout-->
+<main class="text-center py-5 mt-3">
 
-                  {{emailForm.value | json}}  
-                  <hr/>
-                  {{subscribeModel | json}}
-                  <hr/> 
-                  {{email.untouched}}
-                  {{email.pristine}}
-                  {{email.valid}}
-                  <div class="form-container">
-                    <form #emailForm="ngForm" class="border p-5">  
-                        <h4 class="text-uppercase text-center font-weight-bold" style="font-family: Oxygen;"> Join our mailing list</h4 > 
-                        <p class="mb-4 text-center"> Enter your email for newsletters and coupons</p>
-                        <div class="form-group">
-                        <input mdbInput mdbValidate type="email" 
-                        placeholder="Enter Email"  
-                        id="main-submit" 
-                        [class.invalid]="email.invalid && email.touched"
-                        class="form-control" 
-                        required
-                        pattern="[^ @]*@[^ @]*"
-                        name="email"
-                        #email="ngModel"
-                        [(ngModel)]="subscribeModel.email"> 
-                       <!--- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small> --> 
-                       <div *ngIf="email.errors && (email.invalid || email.touched)"> 
-                       <small class="text-danger" [class.d-none]="email.valid || email.untouched">Invalid Email</small>  
-                      </div>
-                        </div> 
-                       <button type="button" id="button" mdbBtn style="background-color: #789CCE;" class="btn-submit-margin text-uppercase mt-5" > Submit</button>   
-                 </form>
-                </div>
-              </section>
-         
-    </section> 
-      </header> 
-      <!-- Main navigation --> 
-      <!--Main container-->
-      <div class="main-container" style="height: 250vh"> 
-      <!--Content-->
-      <div class="content" >  
-        <h4 class="text-uppercase font-weight-bold text-center"></h4>
-   
-<div id="products container-fluid">
-    <div class="products-row container-fluid">
- <div class="img-container"> 
-   <figure>
-            <img class="img-fluid rounded" src="./assets/img/blogimg3.jpeg" class="img-fluid" alt="placeholder">
-          </figure>
-          <div class="centered"> 
-            <p>The Shop</p> 
-          </div>
-          </div>
-          <div class="img-container"> 
-            <figure>
-                     <img class="img-fluid rounded" src="./assets/img/blogimg3.jpeg" class="img-fluid" alt="placeholder">
-                   </figure>
-                   <div class="centered"> 
-                     <p>Catoring & Events</p> 
-                   </div>
-                   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
 
-                   <div class="img-container"> 
-                    <figure>
-                             <img class="img-fluid rounded" src="./assets/img/backsplashpage1.jpeg" class="img-fluid" alt="placeholder">
-                           </figure>
-                           <div class="centered"> 
-                             <p>Get Connected</p> 
-                             <p>hashtag us as @</p>
-                           </div>
-                           </div>
-         
+        <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+<!--Main Layout--> 
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Footer Content</h5>
+        <p>Here you can use rows and columns here to organize your footer content.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
 
     </div>
-    <!--/.products-row-->  
+    <!-- Grid row -->
 
-    
-    </div> 
-    <!--/.products--> 
+  </div>
+  <!-- Footer Links -->
 
-  </div> 
-  <!--/.content-->
-<div class="content"> 
- </div>
-<!--End of container-->
-  <!--Footer-->
-  <footer class="page-footer font-small pt-4" style="font-family:'Source Sans Pro', serif;">
-            <!--Footer Links (1)--> 
-            <div class="container-fluid text-center text-md-left">   
-                <!--Footer Links (2)--> 
-                <div class="footer-row text-center text-md-left "> 
-                      <!--Grid column (0)-->                      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">  
-                        <h6 class="text-uppercase mb-2 font-weight-bold">sweeter thing n life</h6> 
-                        <p> 
-                          About
-                        </p> 
-                        <p> 
-                          Order
-                        </p> 
-                        <p> 
-             Catering
-             </p> 
-<p> 
-  Hours & Locations
-</p> 
-<p> Contact</p> 
-<p>Employment</p> 
-                      </div>
-                      <!--Grid column (1)-->
-                      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">  
-                       
-                        <h6 class="text-uppercase mb-2 font-weight-bold">Contact</h6>
-                        <p>
-                          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                        <p>
-                          <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                        <p>
-                          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                        <p>
-                          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-             
-                      </div>
-                      <!--Closing tag for grid column (1)--> 
-      
-                      <hr class="w-100 clearfix d-md-none"> 
-      
-                      <!--Grid column (2)--> 
-                      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                          <h6 class="text-uppercase mb-4 font-weight-bold">Message US</h6>
-                      <p>Lorem ipsum dolor sit amet,
-                          consectetur
-                          adipisicing elit.</p>
-                        </div>
-                      <!--Closing tag for grid column (2)--> 
-                     
-      
-                  </div> 
-                  <!--Closing tag for footer links 2--> 
-      
-                  <!--Grid row (1)--> 
-                  <div class="footer-row d-flex align-items-center"> 
-                  
-                      <!--Grid column (5)--> 
-                      <div col-md-7 col-lg-8> 
-                          <p class="text-center text-md-left"> Copyright</p> 
-      
-                      </div> 
-                      <!--Closing tag of grid column (5)--> 
-      
-                      <!--Grid column (6)-->
-                      <div>  
-      
-                          <!--Social Buttons--> 
-                          <div> 
-      
-                          </div>
-      
-                      </div> 
-                      <!--Closing tag for grid column (6)-->
-                       
-      
-                  </div> 
-                  <!--Closing tag for grid row (1)-->
-      
-      
-              </div>
-              <!--Closing tag for footer links 1--> 
-      
-      
-          </footer>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/education/angular/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

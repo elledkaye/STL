@@ -8,6 +8,7 @@ import { Subscribe } from '../subscribe';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent  { 
+ 
   subscribeModel = new Subscribe('');
   
   constructor() { }
